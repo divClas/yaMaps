@@ -1,0 +1,191 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 100px auto;
+}
+input {
+  display: block;
+  height: 2.25rem;
+  width: 100%;
+  border-radius: 1.125rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-width: 1px;
+  border-color: transparent;
+  background-color: #eef1f2;
+  background-color: rgba(238, 241, 242);
+  color: #434b51;
+  color: rgba(67, 75, 81);
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform;
+  transition-duration: 0.15s;
+  outline: none;
+}
+button {
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+}
+.center-container {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+.overlay,
+.modal {
+  display: none;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.1875rem);
+  z-index: 49;
+  cursor: pointer;
+}
+.modal {
+  flex-direction: column;
+  background: white;
+  z-index: 51;
+  max-width: 43rem;
+  width: 100%;
+  border-radius: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  padding: 32px 40px;
+  min-height: 729px;
+}
+.label {
+  padding-bottom: 10px;
+  color: #677884;
+}
+#map {
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.data-filter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 20px;
+  background-color: rgba(103, 120, 132);
+}
+.filter {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: white;
+  border-radius: 20px;
+}
+.filter.active {
+  background-color: green;
+}
+.select-pickup,
+.select-adress {
+  padding-top: 20px;
+}
+.suggestions-suggestions {
+  border-radius: 1.125rem;
+  padding: 0 1rem;
+}
+.bottom-text {
+  padding-top: 20px;
+}
+.small-label {
+  color: #677884;
+  font-size: 0.875rem;
+  padding-bottom: 10px;
+}
+.button-added-adress {
+  margin-top: 20px;
+  float: right;
+  width: fit-content;
+  color: white;
+  border-radius: 1.125rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  outline: none;
+  border-color: transparent;
+  cursor: not-allowed;
+  transition: background-color 0.15s ease-in-out;
+}
+.button-added-adress.active {
+  cursor: pointer;
+  background-color: #48a216;
+}
+.button-added-pikup {
+  margin-top: 20px;
+  float: right;
+  width: fit-content;
+  color: white;
+  border-radius: 1.125rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  outline: none;
+  border-color: transparent;
+  background-color: #48a216;
+}
+.select-pickup {
+  display: none;
+}
+.pickup-title {
+  color: rgba(67, 75, 81);
+  line-height: 1.25;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.pikup-adresess {
+  padding-top: 1rem;
+}
+.adresess {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: rgba(67, 75, 81);
+  cursor: pointer;
+}
+.adresess.active {
+  color: #48a216;
+}
+.adresess.active svg path {
+  stroke: #48a216;
+}
+svg {
+  display: flex;
+}
+.adresess .icon-selected {
+  display: none;
+}
+.adresess.active .icon-selected {
+  display: flex;
+}
+#save-adress {
+}
